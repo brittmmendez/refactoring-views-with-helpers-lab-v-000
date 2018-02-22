@@ -571,3 +571,15 @@ ActionView::MissingTemplate (Missing template artists/index, application/index w
   /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
 
 
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (43.2ms)
+
+
+Started GET "/artists/1" for 69.133.193.210 at 2018-02-22 17:45:30 +0000
+Cannot render console from 69.133.193.210! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered artists/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 5.3ms | ActiveRecord: 0.0ms)
