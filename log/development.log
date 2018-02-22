@@ -781,3 +781,26 @@ Processing by SongsController#show as HTML
   [1m[36mSong Load (0.2ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 2]]
   Rendered songs/show.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 16ms (Views: 7.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs/2" for 69.133.193.210 at 2018-02-22 18:14:09 +0000
+Cannot render console from 69.133.193.210! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSong Load (0.1ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered songs/show.html.erb within layouts/application (34.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined local variable or method `song' for #<#<Class:0x00000004fefc50>:0x00000004fe16f0>
+Did you mean?  @song):
+    1: <h1><%= link_to @song.title, song_path(@song) %></h1>
+    2: <h2> <%=display_artist song%> </h2>
+    3: 
+    4: <%= link_to "All Songs", songs_path %>
+  app/views/songs/show.html.erb:2:in `_app_views_songs_show_html_erb__4416289952940929615_42039740'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.4ms)
